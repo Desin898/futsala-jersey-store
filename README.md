@@ -26,6 +26,8 @@ The project focuses on creating a clean shopping experience with interactive pro
 ## 📸 Screenshots
 
 <img width="1911" height="915" alt="image" src="https://github.com/user-attachments/assets/262b0e56-204d-431a-9f8f-0aa2e537aaec" />
+<img width="1910" height="1563" alt="image" src="https://github.com/user-attachments/assets/81489833-aa20-47fa-b80d-306c38ceb976" />
+
 
 
 ## 📂 Project Structure
