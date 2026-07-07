@@ -29,7 +29,8 @@ The project focuses on creating a clean shopping experience with interactive pro
 <img width="1910" height="1563" alt="image" src="https://github.com/user-attachments/assets/81489833-aa20-47fa-b80d-306c38ceb976" />
 <img width="1897" height="885" alt="image" src="https://github.com/user-attachments/assets/3e256e07-4985-4b2b-ac6b-619ace19d2f5" />
 <img width="1910" height="2437" alt="image" src="https://github.com/user-attachments/assets/e3508075-4b44-481c-832c-dfdcdf0118f4" />
-<img width="1910" height="2437" alt="image" src="https://github.com/user-attachments/assets/76336010-778d-417f-9199-1c14e4a1def5" />
+<img width="1877" height="906" alt="image" src="https://github.com/user-attachments/assets/942cf36f-534e-4c70-9be9-3debaecafd11" />
+
 
 
 
