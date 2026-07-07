@@ -1,0 +1,94 @@
+# ⚽ FUTSALA - Football Jersey Store
+
+A modern football jersey e-commerce website built using HTML, CSS, and JavaScript.
+
+The project focuses on creating a clean shopping experience with interactive product browsing, personalized jerseys, shopping cart functionality, and responsive design.
+
+## ✨ Features
+
+- Browse football jerseys by clubs and national teams
+- Product filtering and price sorting
+- Personalized jerseys with custom names and numbers
+- Shopping cart with persistent storage using Local Storage
+- Checkout form with client-side validation
+- Dynamic product reviews loaded from XML
+- Responsive design for desktop and mobile devices
+- Animated hero banners and interactive navigation
+
+## 🛠 Built With
+
+- HTML5
+- CSS3
+- JavaScript (ES6)
+- XML
+- Local Storage API
+
+## 📸 Screenshots
+
+> Screenshots coming soon.
+
+## 🚀 Getting Started
+
+Clone the repository
+
+```bash
+git clone https://github.com/Desin898/futsala-jersey-store.git
+```
+
+Open the project folder and launch `index.html` in your browser.
+
+No installation or additional dependencies are required.
+
+## 📂 Project Structure
+
+```text
+futsala-jersey-store/
+│
+├── images/                 # Product images and website assets
+│
+├── index.html              # Homepage
+├── login.html
+├── checkout.html
+├── cart.html
+├── help.html
+├── about.html
+├── search.html
+│
+├── clubs & national teams/
+│   ├── real-madrid.html
+│   ├── barcelona.html
+│   ├── manchester-united.html
+│   ├── liverpool.html
+│   ├── arsenal.html
+│   ├── chelsea.html
+│   ├── juventus.html
+│   ├── bayern.html
+│   ├── psg.html
+│   ├── argentina.html
+│   ├── brazil.html
+│   ├── germany.html
+│   └── ...more product pages
+│
+├── styles.css              # Main styling
+├── style.css
+├── cart.css
+├── checkout.css
+├── help.css
+├── login.css
+├── search.css
+├── terms-conditions.css
+│
+├── cart.js                 # Shopping cart logic
+├── reviews.js              # XML review loader
+├── search.js               # Product search
+├── cart-personalize.js     # Jersey personalization
+├── code-verification.js
+│
+├── reviews.xml             # Product review database
+│
+└── README.md
+```
+
+## 📄 License
+
+This project is available for learning and personal portfolio purposes.
