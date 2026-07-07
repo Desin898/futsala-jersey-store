@@ -25,19 +25,8 @@ The project focuses on creating a clean shopping experience with interactive pro
 
 ## 📸 Screenshots
 
-> Screenshots coming soon.
+<img width="1911" height="915" alt="image" src="https://github.com/user-attachments/assets/262b0e56-204d-431a-9f8f-0aa2e537aaec" />
 
-## 🚀 Getting Started
-
-Clone the repository
-
-```bash
-git clone https://github.com/Desin898/futsala-jersey-store.git
-```
-
-Open the project folder and launch `index.html` in your browser.
-
-No installation or additional dependencies are required.
 
 ## 📂 Project Structure
 
