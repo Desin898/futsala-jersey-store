@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reviews>
+    <product id="real-madrid-kids">
+        <review>
+            <user>Isum Akmitha</user>
+            <rating>5</rating>
+            <comment>Perfect jersey for my kid! Fits perfectly and looks amazing.</comment>
+        </review>
+        <review>
+            <user>Arosha Fernando</user>
+            <rating>4</rating>
+            <comment>Good quality, but the sizing runs a bit small.</comment>
+        </review>
+        <review>
+            <user>Swetha Dewduni</user>
+            <rating>4</rating>
+            <comment>Very comfortable and stylish. My kid loves it!</comment>
+        </review>
+        <review>
+            <user>Kavindya Linayasekara</user>
+            <rating>5</rating>
+            <comment>Excellent product! The material is top-notch, and the design is fantastic.</comment>
+        </review>
+        <review>
+            <user>Nimasha Perera</user>
+            <rating>4</rating>
+            <comment>Great jersey, but the delivery took a bit longer than expected.</comment>
+        </review>
+    </product>
+</reviews>

@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Jersey Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="checkout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header (same as before) -->
+    <header id="main-header">
+        <div class="logo">
+            <img src="images/logo.png" alt="Site Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" id="home-link">HOME</a></li>
+                <li class="dropdown">
+                    <a href="#" id="clubs-link">CLUBS</a>
+                    <div class="dropdown-content">
+                        <a href="real-madrid.html">Real Madrid</a>
+                        <a href="barcelona.html">Barcelona</a>
+                        <a href="manchester-united.html">Manchester United</a>
+                        <a href="liverpool.html">Liverpool</a>
+                        <a href="fc-bayern.html">Bayern Munich</a>
+                        <a href="psg.html">Paris Saint-Germain</a>
+                        <a href="chelsea.html">Chelsea</a>
+                        <a href="juventus.html">Juventus</a>
+                        <a href="inter-miami.html">Inter Miami</a>
+                    </div>
+                </li>
+                <li><a href="#" id="sale-link">SALE</a></li>
+                <li class="dropdown">
+                    <a href="#" id="old-kits-link">OLD KITS</a>
+                    <div class="dropdown-content">
+                        <a href="#">Season 2022-2023</a>
+                        <a href="#">Season 2023-2024</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" id="national-teams-link">NATIONAL TEAMS</a>
+                    <div class="dropdown-content">
+                        <a href="argentina.html">Argentina</a>
+                        <a href="portugal.html">Portugal</a>
+                        <a href="brazil.html">Brazil</a>
+                        <a href="france.html">France</a>
+                        <a href="germany.html">Germany</a>
+                        <a href="spain.html">Spain</a>
+                        <a href="England.html">England</a>
+                        <a href="italy.html">Italy</a>
+                    </div>
+                </li>              
+            </ul>
+        </nav>
+        <div class="top-links">
+            <a href="help.html" class="top-link">Help</a>
+            <a href="orders-returns.html" class="top-link">Orders & Returns</a>
+            <a href="login.html" class="top-link">JOIN FUTSALA CLUB</a>
+        </div>
+        <div class="search-cart">
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search here">
+                <i class="fas fa-search search-icon"></i>
+                <div class="search-suggestions" id="search-suggestions"></div>
+            </div>
+            <a href="login.html" class="login-icon"><img src="images/login.png" alt="Login"></a>
+            <a href="cart.html" class="cart-icon">
+                <img src="images/cart.png" alt="Cart">
+                <span class="cart-notification">0</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Checkout Page -->
+    <div class="checkout-container">
+        <!-- Left Column: Checkout Steps -->
+        <div class="checkout-steps">
+            <!-- Section 1: Contact Information -->
+            <section class="checkout-section active" id="contact-section">
+                <h1>CHECKOUT</h1>
+                <div class="order-summary-header">
+                    <span id="items-count-price">[0 items] $0.00</span>
+                </div>
+
+                <h2>CONTACT</h2>
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                    <p class="error-message" id="email-error">Please enter a valid email address</p>
+                </div>
+
+                <div class="addictub-offer">
+                    <h3>Want Future Free Shipping?</h3>
+                    <p>Activate your FutsalaClub account to benefit from free shipping on all future orders.</p>
+                    <label class="checkbox-container">
+                        <input type="checkbox" checked>
+                        <span class="checkmark"></span>
+                        Yes, please
+                    </label>
+                </div>
+
+                <!-- Cart Items Preview -->
+                <div id="checkout-items-preview">
+                    <!-- Items will be dynamically added here -->
+                </div>
+
+                <button class="next-button" id="continue-to-address">CONTINUE TO ADDRESS</button>
+            </section>
+
+ <!-- Section 2: Address Information -->
+<section class="checkout-section" id="address-section">
+    <h1>ADDRESS</h1>
+
+    <h2>Delivery address</h2>
+    <div class="form-group">
+        <div class="name-fields">
+            <div>
+                <label for="first-name">First Name *</label>
+                <input type="text" id="first-name" required>
+                <p class="error-message">Please enter your first name.</p>
+            </div>
+            <div>
+                <label for="last-name">Last Name *</label>
+                <input type="text" id="last-name" required>
+                <p class="error-message">Please enter your last name.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="address">Find delivery address *</label>
+        <input type="text" id="address" placeholder="Enter your street address, city, and postal code" required>
+        <p class="error-message">Please enter your delivery address.</p>
+    </div>
+
+    <div class="form-group">
+        <label for="country">Country/Region *</label>
+        <select id="country" required>
+            <option value="">Select Country</option>
+            <option value="US">United States</option>
+            <option value="UK">United Kingdom</option>
+            <option value="LK">Sri Lanka</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="phone">Phone Number *</label>
+        <input type="tel" id="phone" placeholder="Enter your phone number with country code" required>
+        <p class="error-message">Please enter a valid phone number.</p>
+    </div>
+
+    <div class="checkbox-group">
+        <label class="checkbox-container">
+            <input type="checkbox" checked id="same-address">
+            <span class="checkmark"></span>
+            Billing and delivery address are the same
+        </label>
+    </div>
+
+    <div class="checkbox-group">
+        <label class="checkbox-container">
+            <input type="checkbox" required id="age-verification">
+            <span class="checkmark"></span>
+            I'm 13+ years old. *
+        </label>
+        <p class="error-message">You must be 13+ to place an order.</p>
+    </div>
+
+    <div class="newsletter">
+        <p>Also want product updates with our newsletter?</p>
+        <label class="checkbox-container">
+            <input type="checkbox" checked id="newsletter-subscription">
+            <span class="checkmark"></span>
+            Yes, I'd like to receive emails about exclusive sales and more.
+        </label>
+    </div>
+
+    <button class="next-button" id="continue-to-payment">NEXT</button>
+</section>
+            <!-- Section 3: Payment Information -->
+            <section class="checkout-section" id="payment-section">
+                <h1>PAYMENT</h1>
+
+                <div class="shipping-method">
+                    <h2>SHIPPING</h2>
+                    <p>Standard Delivery (3-5 business days)</p>
+                </div>
+
+                <div class="payment-methods">
+                    <h2>PAYMENT</h2>
+                    <div class="payment-options">
+                        <div class="payment-option active" data-payment="visa">
+                            <i class="fab fa-cc-visa"></i>
+                            <span>VISA</span>
+                        </div>
+                        <div class="payment-option" data-payment="affirm">
+                            <img src="images/affirm-logo.png" alt="Affirm">
+                            <span>Affirm</span>
+                        </div>
+                        <div class="payment-option" data-payment="paypal">
+                            <i class="fab fa-cc-paypal"></i>
+                            <span>PayPal</span>
+                        </div>
+                        <div class="payment-option" data-payment="klarna">
+                            <img src="images/klarna-logo.png" alt="Klarna">
+                            <span>Klarna</span>
+                        </div>
+                    </div>
+
+                    <!-- Payment Forms -->
+                    <div class="payment-form" id="visa-form">
+                        <div class="form-group">
+                            <label for="card-number">Card Number *</label>
+                            <input type="text" id="card-number" placeholder="1234 5678 9012 3456" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="card-name">Cardholder Name *</label>
+                            <input type="text" id="card-name" placeholder="Name on card" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="expiry-date">Expiry Date *</label>
+                                <input type="text" id="expiry-date" placeholder="MM/YY" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cvv">CVV *</label>
+                                <input type="text" id="cvv" placeholder="123" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="payment-form" id="affirm-form" style="display:none">
+                        <p>You'll be redirected to Affirm to complete your purchase.</p>
+                        <p>Pay over time with easy monthly payments.</p>
+                    </div>
+
+                    <div class="payment-form" id="paypal-form" style="display:none">
+                        <p>You'll be redirected to PayPal to complete your purchase.</p>
+                        <p>Pay with your PayPal account or credit card.</p>
+                    </div>
+
+                    <div class="payment-form" id="klarna-form" style="display:none">
+                        <p>You'll be redirected to Klarna to complete your purchase.</p>
+                        <p>Pay in 4 interest-free installments.</p>
+                    </div>
+                </div>
+
+                <div class="customer-service">
+                    <p>Questions? Call +9477-801-9281</p>
+                    <p>8AM ET - 11PM ET, 7 days a week</p>
+                </div>
+
+                <div class="privacy-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-conditions.html">Terms and Conditions</a>
+                </div>
+
+                <div class="copyright">
+                    <p>© 2025 Futsala Store.lk</p>
+                </div>
+
+                <button class="place-order-button" id="place-order">PLACE ORDER</button>
+            </section>
+        </div>
+
+        <!-- Right Column: Order Summary (Sticky) -->
+        <div class="order-summary-sidebar">
+            <h2>ORDER SUMMARY</h2>
+            <div id="order-summary-items"></div>
+            <div class="summary-totals">
+                <div>
+                    <span>Subtotal</span>
+                    <span id="order-subtotal">$0.00</span>
+                </div>
+                <div>
+                    <span>Delivery</span>
+                    <span id="order-delivery">$4.99</span>
+                </div>
+                <div>
+                    <span>Sales Tax</span>
+                    <span id="order-tax">$0.00</span>
+                </div>
+                <div class="total">
+                    <span>Total</span>
+                    <span id="order-total">$0.00</span>
+                </div>
+            </div>
+            <div class="payment-options-note">
+                <p>Pay as low as <span id="klarna-amount">$0.00</span>/mo with <strong>Klarna</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="cart-personalize.js"></script>
+    <script>
+        // Constants for calculations
+        const SALES_TAX_RATE = 0.05; // 5% sales tax
+        const DELIVERY_FEE = 4.99;
+
+        // Show the selected section and hide others
+        function showSection(sectionId) {
+            // Validate current section before proceeding
+            if (sectionId === 'address-section' && !validateContactSection()) {
+                return;
+            }
+            if (sectionId === 'payment-section' && !validateAddressSection()) {
+                return;
+            }
+
+            // Hide all sections
+            document.querySelectorAll('.checkout-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Show the selected section
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+
+        // Validate contact section
+        function validateContactSection() {
+            const email = document.getElementById('email').value;
+            const emailError = document.getElementById('email-error');
+            
+            if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                emailError.style.display = 'block';
+                document.getElementById('email').focus();
+                return false;
+            }
+            emailError.style.display = 'none';
+            return true;
+        }
+
+// Validate address section (international-friendly version)
+function validateAddressSection() {
+    let isValid = true;
+    
+    // Validate first name
+    const firstName = document.getElementById('first-name').value;
+    if (!firstName) {
+        document.querySelector('#first-name + .error-message').style.display = 'block';
+        isValid = false;
+    } else {
+        document.querySelector('#first-name + .error-message').style.display = 'none';
+    }
+    
+    // Validate last name
+    const lastName = document.getElementById('last-name').value;
+    if (!lastName) {
+        document.querySelector('#last-name + .error-message').style.display = 'block';
+        isValid = false;
+    } else {
+        document.querySelector('#last-name + .error-message').style.display = 'none';
+    }
+    
+    // Validate address (minimum 5 characters)
+    const address = document.getElementById('address').value;
+    if (!address || address.length < 5) {
+        document.querySelector('#address + .error-message').style.display = 'block';
+        isValid = false;
+    } else {
+        document.querySelector('#address + .error-message').style.display = 'none';
+    }
+    
+    // Validate country
+    const country = document.getElementById('country').value;
+    if (!country) {
+        // Add error handling if needed
+        isValid = false;
+    }
+    
+    // Validate phone (minimum 7 digits)
+    const phone = document.getElementById('phone').value;
+    const digitsOnly = phone.replace(/\D/g, '');
+    if (!phone || digitsOnly.length < 7) {
+        document.querySelector('#phone + .error-message').style.display = 'block';
+        isValid = false;
+    } else {
+        document.querySelector('#phone + .error-message').style.display = 'none';
+    }
+    
+    // Validate age checkbox
+    const ageVerified = document.getElementById('age-verification').checked;
+    if (!ageVerified) {
+        document.querySelector('#age-verification ~ .error-message').style.display = 'block';
+        isValid = false;
+    } else {
+        document.querySelector('#age-verification ~ .error-message').style.display = 'none';
+    }
+    
+    return isValid;
+}
+
+        // Function to render checkout items preview
+        function renderCheckoutItemsPreview() {
+            const container = document.getElementById('checkout-items-preview');
+            container.innerHTML = '';
+            
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let totalItems = 0;
+            let subtotal = 0;
+            
+            cart.forEach(item => {
+                totalItems += item.quantity;
+                subtotal += item.price * item.quantity;
+                
+                const itemElement = document.createElement('div');
+                itemElement.classList.add('checkout-item-preview');
+                itemElement.innerHTML = `
+                    <div class="checkout-item-image">
+                        <img src="${item.image}" alt="${item.name}">
+                    </div>
+                    <div class="checkout-item-details">
+                        <h4>${item.name}</h4>
+                        <p>$${item.price.toFixed(2)}</p>
+                        <p>Size: ${item.size} / Quantity: ${item.quantity}</p>
+                        <p>Color: ${item.color}</p>
+                        ${item.customName ? `<p>Name: ${item.customName}</p>` : ''}
+                        ${item.jerseyNumber ? `<p>Number: ${item.jerseyNumber}</p>` : ''}
+                    </div>
+                `;
+                container.appendChild(itemElement);
+            });
+            
+            // Update items count and price
+            document.getElementById('items-count-price').textContent = 
+                `[${totalItems} item${totalItems !== 1 ? 's' : ''}] $${subtotal.toFixed(2)}`;
+        }
+
+        // Function to update order summary
+        function updateOrderSummary() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            const tax = subtotal * SALES_TAX_RATE;
+            const total = subtotal + tax + DELIVERY_FEE;
+            const klarnaAmount = (total / 4).toFixed(2);
+            
+            // Update sidebar
+            document.getElementById('order-subtotal').textContent = `$${subtotal.toFixed(2)}`;
+            document.getElementById('order-tax').textContent = `$${tax.toFixed(2)}`;
+            document.getElementById('order-total').textContent = `$${total.toFixed(2)}`;
+            document.getElementById('klarna-amount').textContent = `$${klarnaAmount}`;
+            
+            // Update items in sidebar
+            const itemsContainer = document.getElementById('order-summary-items');
+            itemsContainer.innerHTML = '';
+            
+            cart.forEach(item => {
+                const itemElement = document.createElement('div');
+                itemElement.classList.add('summary-item');
+                itemElement.innerHTML = `
+                    <span>${item.name} × ${item.quantity}</span>
+                    <span>$${(item.price * item.quantity).toFixed(2)}</span>
+                `;
+                itemsContainer.appendChild(itemElement);
+            });
+        }
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            showSection('contact-section');
+            renderCheckoutItemsPreview();
+            updateOrderSummary();
+            updateCartIcon();
+
+            // Payment method selection
+            document.querySelectorAll('.payment-option').forEach(option => {
+                option.addEventListener('click', function() {
+                    document.querySelectorAll('.payment-option').forEach(opt => {
+                        opt.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                    
+                    // Hide all payment forms
+                    document.querySelectorAll('.payment-form').forEach(form => {
+                        form.style.display = 'none';
+                    });
+                    
+                    // Show selected payment form
+                    const paymentType = this.getAttribute('data-payment');
+                    document.getElementById(`${paymentType}-form`).style.display = 'block';
+                });
+            });
+
+            // Button event listeners
+            document.getElementById('continue-to-address').addEventListener('click', function() {
+                showSection('address-section');
+            });
+            
+            document.getElementById('continue-to-payment').addEventListener('click', function() {
+                showSection('payment-section');
+            });
+            
+            document.getElementById('place-order').addEventListener('click', function() {
+                if (validatePaymentSection()) {
+                    // Process order here
+                    alert('Order placed successfully!');
+                    // Redirect to confirmation page
+                }
+            });
+        });
+
+        // Validate payment section
+        function validatePaymentSection() {
+            const activePayment = document.querySelector('.payment-option.active').getAttribute('data-payment');
+            
+            if (activePayment === 'visa') {
+                // Validate Visa form
+                const cardNumber = document.getElementById('card-number').value;
+                const cardName = document.getElementById('card-name').value;
+                const expiryDate = document.getElementById('expiry-date').value;
+                const cvv = document.getElementById('cvv').value;
+                
+                if (!cardNumber || !/^\d{16}$/.test(cardNumber.replace(/\s/g, ''))) {
+                    alert('Please enter a valid card number');
+                    return false;
+                }
+                if (!cardName) {
+                    alert('Please enter cardholder name');
+                    return false;
+                }
+                if (!expiryDate || !/^\d{2}\/\d{2}$/.test(expiryDate)) {
+                    alert('Please enter a valid expiry date (MM/YY)');
+                    return false;
+                }
+                if (!cvv || !/^\d{3,4}$/.test(cvv)) {
+                    alert('Please enter a valid CVV');
+                    return false;
+                }
+            }
+            
+            return true;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results - Futsal Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Include your header -->
+    <header id="main-header">
+        <!-- Your existing header content -->
+    </header>
+
+    <main class="search-results">
+        <h1>Search Results for "<span id="search-query"></span>"</h1>
+        
+        <div class="results-container" id="results-container">
+            <!-- Results will be populated by JavaScript -->
+        </div>
+    </main>
+    
+    <!-- Include your footer -->
+    <footer>
+        <!-- Your existing footer content -->
+    </footer>
+    
+    <script src="js/search.js"></script>
+    <script>
+        // Get search query from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const query = urlParams.get('q') || '';
+        
+        document.getElementById('search-query').textContent = query;
+        
+        // Filter products based on query
+        const filteredProducts = products.filter(product => 
+            product.name.toLowerCase().includes(query.toLowerCase())
+        );
+        
+        // Display results
+        const resultsContainer = document.getElementById('results-container');
+        
+        if (filteredProducts.length > 0) {
+            filteredProducts.forEach(product => {
+                const productElement = document.createElement('div');
+                productElement.className = 'product-result';
+                productElement.innerHTML = `
+                    <h3><a href="${product.url}">${product.name}</a></h3>
+                    <p>Available: ${product.count}</p>
+                `;
+                resultsContainer.appendChild(productElement);
+            });
+        } else {
+            resultsContainer.innerHTML = '<p>No products found matching your search.</p>';
+        }
+    </script>
+</body>
+</html>

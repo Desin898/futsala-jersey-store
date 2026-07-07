@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help - Jersey Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="help.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header with Navigation Bar (Same as Homepage) -->
+    <header id="main-header">
+        <div class="logo">
+            <img src="images/logo.png" alt="Site Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" id="home-link">HOME</a></li>
+                <li class="dropdown">
+                    <a href="#" id="clubs-link">CLUBS</a>
+                    <div class="dropdown-content">
+                        <a href="real-madrid.html">Real Madrid</a>
+                        <a href="barcelona.html">Barcelona</a>
+                        <a href="manchester-united.html">Manchester United</a>
+                        <a href="liverpool.html">Liverpool</a>
+                        <a href="fc-bayern.html">Bayern Munich</a>
+                        <a href="psg.html">Paris Saint-Germain</a>
+                        <a href="chelsea.html">Chelsea</a>
+                        <a href="juventus.html">Juventus</a>
+                        <a href="inter-miami.html">Inter Miami</a>
+                    </div>
+                </li>
+                <li><a href="#" id="sale-link">SALE</a></li>
+                <li class="dropdown">
+                    <a href="#" id="old-kits-link">OLD KITS</a>
+                    <div class="dropdown-content">
+                        <a href="#">Season 2022-2023</a>
+                        <a href="#">Season 2023-2024</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" id="national-teams-link">NATIONAL TEAMS</a>
+                    <div class="dropdown-content">
+                        <a href="argentina.html">Argentina</a>
+                        <a href="portugal.html">Portugal</a>
+                        <a href="brazil.html">Brazil</a>
+                        <a href="france.html">France</a>
+                        <a href="germany.html">Germany</a>
+                        <a href="spain.html">Spain</a>
+                        <a href="England.html">England</a>
+                        <a href="italy.html">Italy</a>
+                    </div>
+                </li>              
+            </ul>
+        </nav>
+        <div class="top-links">
+            <a href="help.html" class="top-link">Help</a>
+            <a href="orders-returns.html" class="top-link">Orders & Returns</a>
+            <a href="login.html" class="top-link">JOIN FUTSALA CLUB</a>
+        </div>
+        <div class="search-cart">
+            <div class="search-bar">
+                <input type="text" placeholder="Search here">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+            <!-- Login Icon -->
+            <a href="login.html" class="login-icon"><img src="images/login.png" alt="Login"></a>
+            <!-- Cart Icon -->
+            <a href="cart.html" class="cart-icon">
+                <img src="images/cart.png" alt="Cart">
+                <span class="cart-notification">0</span>
+                </a>
+        </div>
+    </header>
+
+    <!-- Help Page Content -->
+    <main class="help-page">
+        <!-- Weather Notice Section -->
+        <section class="weather-notice">
+            <p>Due to weather in certain regions, please note that your delivery may be delayed. Our shipping partners are working hard to deliver all packages on time. Use your tracking number on the carrier’s site for the most up-to-date status of your delivery.</p>
+        </section>
+
+        <!-- Get Help Section -->
+        <section class="get-help">
+            <div class="get-help-content">
+                <h1>Get help with your orders</h1>
+                <p>Log in to view your recent orders, track delivery status, or arrange an exchange or return.</p>
+            </div>
+            <button class="login-button">LOG IN</button>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <h2>FREQUENTLY ASKED QUESTIONS</h2>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleDropdown(1)">
+                    <h3>When will I get my refund?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer" id="faq-answer-1">
+                    <p>Once your return arrives at one of our warehouses and the quality has been approved, we’ll initiate your refund.</p>
+                    <p>If you chose an e-gift card as the refund method, you’ll receive this via email immediately after your return was approved.</p>
+                    <p>Did you choose to get a refund issued to your original payment method? Then it can take up to 14 business days until you see the amount on your account, depending on your bank.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleDropdown(2)">
+                    <h3>How do I return my product(s)?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer" id="faq-answer-2">
+                    <p>Most items can be returned for free within 30 days after receiving your order.</p>
+                    <p>Everything you return should be in good condition. Make sure you don’t cut off tags if there are any. Pack all items in their original packaging.</p>
+                    <p>Start a return on our website or on the app and follow the instructions. You’ll receive all the details you need before dropping off your parcel at the drop-off point.</p>
+                    <p>Did you buy something in one of our stores? Please return to the store to return or exchange it in person.</p>
+                    <button class="start-return-button" onclick="window.location.href='orders-returns.html'">START A RETURN</button>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleDropdown(3)">
+                    <h3>Can I exchange my product(s)?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer" id="faq-answer-3">
+                    <p>Ordered the wrong size or color? You can exchange most items for free within 30 days after receiving your order.</p>
+                    <p>Everything you exchange should be in its original state and packaging. Make sure you don’t cut off tags if there are any.</p>
+                    <p>Start an exchange on our website or the app and follow the instructions. You’ll receive all the details you need before dropping off your package at the drop-off point.</p>
+                    <p>Make sure to drop off your parcel within 10 days after letting us know you want to exchange the item. Exchange with the carrier that’s mentioned on your exchange label to avoid costs.</p>
+                    <button class="start-exchange-button" onclick="window.location.href='orders-returns.html'">START EXCHANGE</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Support Section -->
+        <section class="contact-support">
+            <div class="contact-support-box">
+                <h2>STILL CAN’T FIND YOUR ANSWER?</h2>
+                <p>ASK OUR CUSTOMER SERVICE</p>
+                <p>Mon - Sun: 5:00 AM to 8:00 PM</p>
+                <button class="contact-button">CONTACT US →</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Jersey Store. All rights reserved.</p>
+            <div class="social-media">
+                <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+            </div><br>
+            <div class="footer-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="about.html">About</a>
+                <a href="terms-conditions.html">Terms & Conditions</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Link the external JavaScript file -->
+    <script src="cart.js"></script>
+    <script>
+        function toggleDropdown(id) {
+            const answer = document.getElementById(`faq-answer-${id}`);
+            answer.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

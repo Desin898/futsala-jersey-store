@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jersey Store - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Skip link for keyboard users -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header with Navigation Bar - Removed redundant role="banner" -->
+    <header id="main-header">
+        <div class="logo">
+            <img src="images/logo.png" alt="FUTSALA Logo">
+        </div>
+        <!-- Removed redundant role="navigation" -->
+        <nav>
+            <ul>
+                <li><a href="index.html" id="home-link">HOME</a></li>
+                <li class="dropdown">
+                    <a href="#" id="clubs-link">CLUBS</a>
+                    <div class="dropdown-content" role="menu">
+                        <a href="real-madrid.html" role="menuitem">Real Madrid</a>
+                        <a href="barcelona.html" role="menuitem">Barcelona</a>
+                        <a href="manchester-united.html" role="menuitem">Manchester United</a>
+                        <a href="liverpool.html" role="menuitem">Liverpool</a>
+                        <a href="fc-bayern.html" role="menuitem">Bayern Munich</a>
+                        <a href="psg.html" role="menuitem">Paris Saint-Germain</a>
+                        <a href="chelsea.html" role="menuitem">Chelsea</a>
+                        <a href="juventus.html" role="menuitem">Juventus</a>
+                        <a href="inter-miami.html" role="menuitem">Inter Miami</a>
+                    </div>
+                </li>
+                <li><a href="#" id="sale-link">SALE</a></li>
+                <li class="dropdown">
+                    <a href="#" id="old-kits-link">OLD KITS</a>
+                    <div class="dropdown-content" role="menu">
+                        <a href="#" role="menuitem">Season 2022-2023</a>
+                        <a href="#" role="menuitem">Season 2023-2024</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" id="national-teams-link">NATIONAL TEAMS</a>
+                    <div class="dropdown-content" role="menu">
+                        <a href="argentina.html" role="menuitem">Argentina</a>
+                        <a href="portugal.html" role="menuitem">Portugal</a>
+                        <a href="brazil.html" role="menuitem">Brazil</a>
+                        <a href="france.html" role="menuitem">France</a>
+                        <a href="germany.html" role="menuitem">Germany</a>
+                        <a href="spain.html" role="menuitem">Spain</a>
+                        <a href="England.html" role="menuitem">England</a>
+                        <a href="italy.html" role="menuitem">Italy</a>
+                    </div>
+                </li>              
+            </ul>
+        </nav>
+        <div class="top-links">
+            <a href="help.html" class="top-link">Help</a>
+            <a href="orders-returns.html" class="top-link">Orders & Returns</a>
+            <a href="login.html" class="top-link">JOIN FUTSALA CLUB</a>
+        </div>
+        <div class="search-cart">
+            <div class="search-bar">
+                <label for="search-input" class="visually-hidden">Search for jerseys</label>
+                <input type="text" id="search-input" placeholder="Search here" aria-label="Search for jerseys">
+                <button type="submit" class="search-button" aria-label="Search">
+                    <i class="fas fa-search search-icon" aria-hidden="true"></i>
+                </button>
+                <div class="search-suggestions" id="search-suggestions" role="listbox"></div>
+            </div>
+            <a href="login.html" class="login-icon"><img src="images/login.png" alt="Login to your account"></a>
+            <a href="cart.html" class="cart-icon">
+                <img src="images/cart.png" alt="Shopping cart with 0 items">
+                <span class="cart-notification">0</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Removed redundant role="main" -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1 class="visually-hidden">FUTSALA - Authentic Football Jerseys</h1>
+            <div class="hero-container">
+                <!-- Left Image Space -->
+                <div class="hero-space" id="hero1">
+                    <img src="images/hero1.jpg" alt="Football player in FUTSALA jersey" class="active">
+                    <img src="images/hero2.jpg" alt="Fans wearing FUTSALA jerseys" class="">
+                    <img src="images/hero3.jpg" alt="Limited edition FUTSALA jersey" class="">
+                </div>
+
+                <!-- Middle Image Space -->
+                <div class="hero-space" id="hero2">
+                    <img src="images/hero4.jpg" alt="New season jersey collection" class="active">
+                    <img src="images/hero5.jpg" alt="Customizable jerseys" class="">
+                    <img src="images/hero6.jpg" alt="Goalkeeper jerseys" class="">
+                </div>
+
+                <!-- Right Image Space -->
+                <div class="hero-space" id="hero3">
+                    <img src="images/hero7.jpg" alt="Women's football jerseys" class="active">
+                    <img src="images/hero8.jpg" alt="Kids jerseys collection" class="">
+                    <img src="images/hero9.jpg" alt="National team jerseys" class="">
+                </div>
+            </div>
+            <!-- LIGHTBOUND Content Inside Hero Section -->
+            <div class="lightbound-content">
+                <div class="lightbound-header">
+                    <h2>LEGACY DEAL</h2>
+                </div>
+                <div class="lightbound-text">
+                    <p>Unlock the past, play for the future! Grab our Buy 2, Get 1 Free offer on old-season jerseys. Relive the glory days and stock up on iconic designs at unbeatable prices.</p>
+                    <div class="shop-now-container">
+                        <a href="#" class="shop-now-button">SHOP NOW →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Delivery Section -->
+        <section class="delivery" aria-label="Delivery partners">
+            <p>Fast & Secure delivery with</p>
+            <div class="delivery-logos">
+                <img src="images/fedex.png" alt="FedEx">
+                <img src="images/dhl.png" alt="DHL">
+                <img src="images/ups.png" alt="UPS">
+            </div>
+        </section>
+
+        <!-- Changed section to div since it has no heading -->
+        <div class="filter-sort">
+            <button type="button">FILTER & SORT</button>
+        </div>
+
+        <!-- New Arrivals and Best Sellers Navigation -->
+        <nav class="section-nav" aria-label="Product categories">
+            <ul>
+                <li><a href="#" class="section-tab active" data-target="new-arrivals">New Arrivals</a></li>
+                <li><a href="#" class="section-tab" data-target="best-sellers">Best Sellers</a></li>
+            </ul>
+        </nav>
+
+        <!-- New Arrivals Section -->
+        <section id="new-arrivals" class="kits-section active" aria-labelledby="new-arrivals-heading">
+            <h2 id="new-arrivals-heading" class="visually-hidden">New Arrivals</h2>
+            <div class="kit-container">
+                <div class="kit">
+                    <a href="real-madrid.html">
+                        <img src="images/real-madrid.jpg" alt="Real Madrid 24/25 Home Jersey">
+                    </a>
+                    <div class="price">
+                        <span class="original-price">$120</span>
+                        <span class="discounted-price">$100</span>
+                        <span class="discount-percentage">16% off</span>
+                    </div>
+                    <h3>Real Madrid 24/25 Home Jersey</h3>
+                </div>
+                <div class="kit">
+                    <a href="barcelona.html">
+                        <img src="images/barcelona.jpg" alt="Barcelona 24/25 Home Jersey">
+                    </a>
+                    <div class="price">
+                        <span class="original-price">$120</span>
+                        <span class="discounted-price">$100</span>
+                        <span class="discount-percentage">16% off</span>
+                    </div>
+                    <h3>Barcelona 24/25 Home Jersey</h3>
+                </div>
+                <div class="kit">
+                    <a href="argentina.html">
+                        <img src="images/argentina.jpg" alt="Argentina Anniversary Jersey">
+                    </a>
+                    <div class="price">
+                        <span class="original-price">$150</span>
+                        <span class="discounted-price">$120</span>
+                        <span class="discount-percentage">20% off</span>
+                    </div>
+                    <h3>Argentina Anniversary Jersey</h3>
+                </div>
+                <div class="kit">
+                    <a href="portugal.html">
+                        <img src="images/portugal.jpg" alt="Portugal 24/25 Home Jersey">
+                    </a>
+                    <div class="price">
+                        <span class="original-price">$150</span>
+                        <span class="discounted-price">$120</span>
+                        <span class="discount-percentage">20% off</span>
+                    </div>
+                    <h3>Portugal 24/25 Home Jersey</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Best Sellers Section -->
+        <section id="best-sellers" class="kits-section" aria-labelledby="best-sellers-heading">
+            <h2 id="best-sellers-heading" class="visually-hidden">Best Sellers</h2>
+            <div class="kit-container">
+                <div class="kit">
+                    <a href="mexico.html">
+                        <img src="images/mexico.jpg" alt="Mexico 24/25 Gold Jersey">
+                    </a>
+                    <div class="price">
+                        <span class="original-price">$120</span>
+                        <span class="discounted-price">$100</span>
+                        <span class="discount-percentage">16% off</span>
+                    </div>
+                    <h3>Mexico 24/25 Gold Jersey</h3>
+                </div>
+                <div class="kit">
+                    <a href="bayern-bstn.html">
+                        <img src="images/bstn.jpg" alt="Bayern 24/25 BSTN Jersey">
+                    </a>
+                    <div class="price">
+                        <span class="original-price">$120</span>
+                        <span class="discounted-price">$100</span>
+                        <span class="discount-percentage">16% off</span>
+                    </div>
+                    <h3>Bayern 24/25 BSTN Jersey</h3>
+                </div>
+                <div class="kit">
+                    <a href="real-cny.html">
+                        <img src="images/cny.jpg" alt="Real Madrid CNY Jersey">
+                    </a>
+                    <div class="price">
+                        <span class="original-price">$150</span>
+                        <span class="discounted-price">$120</span>
+                        <span class="discount-percentage">20% off</span>
+                    </div>
+                    <h3>Real Madrid CNY Jersey</h3>
+                </div>
+                <div class="kit">
+                    <a href="man-united-terrace.html">
+                        <img src="images/terrace.jpg" alt="Manchester United Terrace Icons Jersey">
+                    </a>
+                    <div class="price">
+                        <span class="original-price">$150</span>
+                        <span class="discounted-price">$120</span>
+                        <span class="discount-percentage">20% off</span>
+                    </div>
+                    <h3>Manchester United Terrace Icons Jersey</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="categories" aria-labelledby="categories-heading">
+            <h2 id="categories-heading">Shop by Category</h2>
+            <div class="category-container">
+                <!-- Men Category -->
+                <div class="category">
+                    <img src="images/men.jpg" alt="Men's football jerseys">
+                    <h3>Men</h3>
+                    <a href="men.html">Shop Now</a>
+                </div>
+                <!-- Women Category -->
+                <div class="category">
+                    <img src="images/women.jpg" alt="Women's football jerseys">
+                    <h3>Women</h3>
+                    <a href="women.html">Shop Now</a>
+                </div>
+                <!-- Kids Category -->
+                <div class="category">
+                    <img src="images/kids.jpg" alt="Kids' football jerseys">
+                    <h3>Kids</h3>
+                    <a href="kids.html">Shop Now</a>
+                </div> 
+            </div>
+        </section>
+
+        <!-- Elevate Your Game Section -->
+        <section class="elevate-section" aria-labelledby="elevate-heading">  
+            <div class="elevate-content">  
+                <h2 id="elevate-heading">ELEVATE YOUR GAME WITH AUTHENTIC JERSEYS</h2>
+                <p>At FUTSALA, we believe that every jersey tells a story of passion, dedication, and the love for the game. Whether you're cheering from the stands, playing on the field, or collecting your favorite team's legacy, our premium jerseys connect you to the spirit of the sport.</p>
+                <p>We offer officially licensed, high-quality jerseys from the biggest clubs, national teams, and legendary players. Designed for comfort and performance, our jerseys feature authentic details, premium fabrics, and a fit that lets you move like a pro.</p>
+                <p>Sports unite us, and the right jersey makes all the difference. From match-day essentials to exclusive limited editions, we bring you the gear that fuels your passion. Because wearing your colors isn't just about style it's about identity.</p>
+                <p>Game on. Wear it with pride.</p>
+            </div>
+            <div class="elevate-logo">
+                <img src="images/logo.png" alt="">
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer - Removed redundant role="contentinfo" -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Jersey Store. All rights reserved.</p>
+            <div class="social-media">
+                <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+            </div>
+            <div class="footer-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="about.html">About</a>
+                <a href="terms-conditions.html">Terms & Conditions</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript remains unchanged -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            function loopHeroImages(heroSpaceId) {
+                const heroSpace = document.getElementById(heroSpaceId);
+                const images = heroSpace.querySelectorAll('img');
+                let currentIndex = 0;
+
+                setInterval(() => {
+                    images[currentIndex].classList.remove('active');
+                    currentIndex = (currentIndex + 1) % images.length;
+                    images[currentIndex].classList.add('active');
+                }, 3000);
+            }
+
+            loopHeroImages("hero1");
+            loopHeroImages("hero2");
+            loopHeroImages("hero3");
+        });
+    </script>
+    <script>
+        document.querySelectorAll('.section-nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('.section-nav a').forEach(lnk => lnk.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        let lastScroll = 0;
+        const header = document.getElementById("main-header");
+
+        window.addEventListener("scroll", () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > lastScroll && currentScroll > 100) {
+                header.classList.remove("show");
+                header.classList.add("hide");
+            } else {
+                header.classList.remove("hide");
+                header.classList.add("show");
+            }
+            lastScroll = currentScroll;
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const dropdowns = document.querySelectorAll(".dropdown");
+            dropdowns.forEach((dropdown) => {
+                dropdown.addEventListener("mouseenter", () => {
+                    dropdown.querySelector(".dropdown-content").style.display = "block";
+                });
+                dropdown.addEventListener("mouseleave", () => {
+                    dropdown.querySelector(".dropdown-content").style.display = "none";
+                });
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const currentPage = window.location.pathname.split('/').pop();
+            const navLinks = {
+                'index.html': 'home-link',
+                'real-madrid.html': 'clubs-link',
+                'barcelona.html': 'clubs-link',
+                'manchester-united.html': 'clubs-link',
+                'fc-bayern.html': 'clubs-link',
+                'argentina.html': 'national-teams-link',
+                'portugal.html': 'national-teams-link'
+            };
+            const activeLinkId = navLinks[currentPage];
+            if (activeLinkId) {
+                const activeLink = document.getElementById(activeLinkId);
+                if (activeLink) {
+                    activeLink.classList.add('active');
+                }
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const kits = document.querySelectorAll('.kit');
+            kits.forEach(kit => {
+                kit.addEventListener('mouseenter', function () {
+                    this.style.transform = 'translateY(-10px)';
+                    this.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.2)';
+                });
+                kit.addEventListener('mouseleave', function () {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = 'none';
+                });
+                kit.addEventListener('click', function () {
+                    kits.forEach(k => k.classList.remove('selected'));
+                    this.classList.add('selected');
+                    const kitName = this.querySelector('h3').textContent;
+                    console.log(`Selected kit: ${kitName}`);
+                });
+            });
+        });
+    </script>
+    <script src="cart.js"></script>
+    <script src="search.js"></script>
+</body>
+</html>

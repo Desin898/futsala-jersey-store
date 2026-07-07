@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders & Returns - Jersey Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="orders-returns.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header with Navigation Bar (Same as Homepage) -->
+    <header id="main-header">
+        <div class="logo">
+            <img src="images/logo.png" alt="Site Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" id="home-link">HOME</a></li>
+                <li class="dropdown">
+                    <a href="#" id="clubs-link">CLUBS</a>
+                    <div class="dropdown-content">
+                        <a href="real-madrid.html">Real Madrid</a>
+                        <a href="barcelona.html">Barcelona</a>
+                        <a href="manchester-united.html">Manchester United</a>
+                        <a href="liverpool.html">Liverpool</a>
+                        <a href="fc-bayern.html">Bayern Munich</a>
+                        <a href="psg.html">Paris Saint-Germain</a>
+                        <a href="chelsea.html">Chelsea</a>
+                        <a href="juventus.html">Juventus</a>
+                        <a href="inter-miami.html">Inter Miami</a>
+                    </div>
+                </li>
+                <li><a href="#" id="sale-link">SALE</a></li>
+                <li class="dropdown">
+                    <a href="#" id="old-kits-link">OLD KITS</a>
+                    <div class="dropdown-content">
+                        <a href="#">Season 2022-2023</a>
+                        <a href="#">Season 2023-2024</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" id="national-teams-link">NATIONAL TEAMS</a>
+                    <div class="dropdown-content">
+                        <a href="argentina.html">Argentina</a>
+                        <a href="portugal.html">Portugal</a>
+                        <a href="brazil.html">Brazil</a>
+                        <a href="france.html">France</a>
+                        <a href="germany.html">Germany</a>
+                        <a href="spain.html">Spain</a>
+                        <a href="England.html">England</a>
+                        <a href="italy.html">Italy</a>
+                    </div>
+                </li>              
+            </ul>
+        </nav>
+        <div class="top-links">
+            <a href="help.html" class="top-link">Help</a>
+            <a href="orders-returns.html" class="top-link">Orders & Returns</a>
+            <a href="login.html" class="top-link">JOIN FUTSALA CLUB</a>
+        </div>
+        <div class="search-cart">
+            <div class="search-bar">
+                <input type="text" placeholder="Search here">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+            <!-- Login Icon -->
+            <a href="login.html" class="login-icon"><img src="images/login.png" alt="Login"></a>
+            <!-- Cart Icon -->
+            <a href="cart.html" class="cart-icon">
+                <img src="images/cart.png" alt="Cart">
+                <span class="cart-notification">0</span>
+                </a>
+        </div>
+    </header>
+
+    <!-- Orders and Returns Page Content -->
+    <main class="orders-returns-page">
+        <!-- First Form: Email and Action -->
+        <section class="form-section" id="form-1">
+            <h1>MANAGE ORDERS AND RETURNS</h1>
+            <p>You can exchange or return an item within 30 days after receiving your order.</p>
+            <form id="orders-form-1">
+                <div class="form-group">
+                    <label for="email">WHAT'S YOUR EMAIL?</label>
+                    <input type="email" id="email" name="email" placeholder="Email *" required>
+                </div>
+                <div class="form-group">
+                    <label for="action">WHAT DO YOU WANT TO DO?</label>
+                    <select id="action" name="action" required>
+                        <option value="track">Track an order</option>
+                        <option value="exchange-return">Start an exchange or return</option>
+                    </select>
+                </div>
+                <button type="submit" class="continue-button">CONTINUE</button>
+            </form>
+        </section>
+
+        <!-- Second Form: Order Number or Create Account -->
+        <section class="form-section" id="form-2" style="display: none;">
+            <h1>MANAGE ORDERS AND RETURNS</h1>
+            <p>Enter your order number to track your order. If you don't want to look up your order number, you can also create an account.</p>
+            <form id="orders-form-2">
+                <div class="form-group">
+                    <label for="order-number">Order number *</label>
+                    <input type="text" id="order-number" name="order-number" placeholder="You can find this in your confirmation email" required>
+                </div>
+                <p class="create-account-link"><a href="#">CREATE ACCOUNT</a></p>
+                <button type="submit" class="continue-button">CONTINUE →</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Jersey Store. All rights reserved.</p>
+            <div class="social-media">
+                <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+            </div><br>
+            <div class="footer-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="about.html">About</a>
+                <a href="terms-conditions.html">Terms & Conditions</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Link the external JavaScript file -->
+    <script src="cart.js"></script>
+    <script>
+        // JavaScript to handle form navigation
+        document.getElementById('orders-form-1').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent form submission
+            document.getElementById('form-1').style.display = 'none'; // Hide first form
+            document.getElementById('form-2').style.display = 'block'; // Show second form
+        });
+    </script>
+</body>
+</html>

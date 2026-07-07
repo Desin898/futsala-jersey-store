@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Jersey Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header with Navigation Bar (Same as Homepage) -->
+    <header id="main-header">
+        <div class="logo">
+            <img src="images/logo.png" alt="Site Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" id="home-link">HOME</a></li>
+                <li class="dropdown">
+                    <a href="#" id="clubs-link">CLUBS</a>
+                    <div class="dropdown-content">
+                        <a href="real-madrid.html">Real Madrid</a>
+                        <a href="barcelona.html">Barcelona</a>
+                        <a href="manchester-united.html">Manchester United</a>
+                        <a href="liverpool.html">Liverpool</a>
+                        <a href="fc-bayern.html">Bayern Munich</a>
+                        <a href="psg.html">Paris Saint-Germain</a>
+                        <a href="chelsea.html">Chelsea</a>
+                        <a href="juventus.html">Juventus</a>
+                        <a href="inter-miami.html">Inter Miami</a>
+                    </div>
+                </li>
+                <li><a href="#" id="sale-link">SALE</a></li>
+                <li class="dropdown">
+                    <a href="#" id="old-kits-link">OLD KITS</a>
+                    <div class="dropdown-content">
+                        <a href="#">Season 2022-2023</a>
+                        <a href="#">Season 2023-2024</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" id="national-teams-link">NATIONAL TEAMS</a>
+                    <div class="dropdown-content">
+                        <a href="argentina.html">Argentina</a>
+                        <a href="portugal.html">Portugal</a>
+                        <a href="brazil.html">Brazil</a>
+                        <a href="france.html">France</a>
+                        <a href="germany.html">Germany</a>
+                        <a href="spain.html">Spain</a>
+                        <a href="England.html">England</a>
+                        <a href="italy.html">Italy</a>
+                    </div>
+                </li>              
+            </ul>
+        </nav>
+        <div class="top-links">
+            <a href="help.html" class="top-link">Help</a>
+            <a href="orders-returns.html" class="top-link">Orders & Returns</a>
+            <a href="login.html" class="top-link">JOIN FUTSALA CLUB</a>
+        </div>
+        <div class="search-cart">
+            <div class="search-bar">
+                <input type="text" placeholder="Search here">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+            <!-- Login Icon -->
+            <a href="login.html" class="login-icon"><img src="images/login.png" alt="Login"></a>
+            <!-- Cart Icon -->
+            <a href="cart.html" class="cart-icon">
+                <img src="images/cart.png" alt="Cart">
+                <span class="cart-notification">0</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Cart Page -->
+    <div class="cart-page">
+        <!-- Left Column: Cart Items -->
+        <div class="cart-items-column">
+            <h1>YOUR CART</h1>
+            <p class="cart-notice">TOTAL: <span id="cart-total">$0.00</span></p>
+            <p class="cart-notice">Items in your bag are not reserved — check out now to make them yours.</p>
+
+            <!-- Cart Items Container -->
+            <div id="cart-items">
+                <!-- Items will be dynamically added here -->
+            </div>
+        </div>
+
+        <!-- Right Column: Order Summary -->
+        <div class="order-summary-column">
+            <h2>ORDER SUMMARY</h2>
+            <div class="summary-details">
+                <p><strong><span id="item-count">0 item(s)</span></strong></p>
+                <p>Sales Tax: <span id="sales-tax">$0.00</span></p>
+                <p>Delivery: <span id="delivery-fee">$4.99</span></p>
+                <p>Total: <span id="order-total">$0.00</span></p>
+                <p class="klarna">4 interest-free payments of <span id="klarna-amount">$0.00</span> with <strong>Klarna</strong>. <a href="#">Learn More</a></p>
+            </div>
+        
+            <!-- Promo Code Section -->
+            <div class="promo-code">
+                <h2>USE A PROMO CODE</h2>
+                <input type="text" placeholder="Enter promo code">
+                <button>APPLY</button>
+            </div>
+        
+            <!-- Checkout Section -->
+            <div class="checkout">
+                <button class="checkout-button" onclick="window.location.href='Checkout.html'">CHECKOUT</button>
+            </div>
+        
+            <!-- Accepted Payment Methods -->
+            <div class="payment-methods">
+                <h2>ACCEPTED PAYMENT METHODS</h2>
+                <div class="payment-icons">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-klarna"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link the external JavaScript file for cart functionality -->
+    <script src="cart-personalize.js"></script>
+    <script>
+        // Constants for calculations
+        const SALES_TAX_RATE = 0.05; // 5% sales tax
+        const DELIVERY_FEE = 4.99;
+    
+        // Function to calculate and update the order summary
+        function updateOrderSummary() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            const salesTax = subtotal * SALES_TAX_RATE;
+            const total = subtotal + salesTax + DELIVERY_FEE;
+            
+            // Update the Order Summary section
+            document.getElementById('cart-total').textContent = `$${subtotal.toFixed(2)}`;
+            document.getElementById('item-count').textContent = `${cart.length} item${cart.length !== 1 ? 's' : ''}`;
+            document.getElementById('sales-tax').textContent = `$${salesTax.toFixed(2)}`;
+            document.getElementById('delivery-fee').textContent = `$${DELIVERY_FEE.toFixed(2)}`;
+            document.getElementById('order-total').textContent = `$${total.toFixed(2)}`;
+            
+            // Update Klarna payments
+            const klarnaAmount = total / 4;
+            document.getElementById('klarna-amount').textContent = `$${klarnaAmount.toFixed(2)}`;
+        }
+        
+        // Make the function available globally
+        window.updateOrderSummary = updateOrderSummary;
+        
+        // Initialize the cart when the page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.location.pathname.includes('cart.html')) {
+                renderCart();
+                updateOrderSummary();
+            }
+        });
+    </script>
+</body>
+</html>

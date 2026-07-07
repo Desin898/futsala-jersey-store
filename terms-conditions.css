@@ -1,0 +1,57 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Terms & Conditions Section */
+.terms-conditions {
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.terms-conditions .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.terms-conditions h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #000;
+}
+
+.terms-conditions h2 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #ff6600; 
+}
+
+.terms-conditions p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.terms-conditions ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.terms-conditions ul li {
+    margin-bottom: 10px;
+}
+
+.terms-conditions a {
+    color: #ff6600; /* Orange color for links */
+    text-decoration: none;
+}
+
+.terms-conditions a:hover {
+    text-decoration: underline;
+}

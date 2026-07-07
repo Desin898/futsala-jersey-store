@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Men Soccer Jersey - Jersey Store</title>
+  <link rel="stylesheet" href="kids.css">
+  <link rel="stylesheet" href="cart.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Optional: Inline styling for the filter & sort container */
+    #filter-sort-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      padding: 10px;
+      background: #f5f5f5;
+    }
+    .sort-options,
+    .filter-options {
+      display: flex;
+      align-items: center;
+    }
+    .sort-options label,
+    .filter-options span {
+      margin-right: 10px;
+      font-weight: bold;
+    }
+    .filter-options label {
+      margin-right: 8px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header (Same as Homepage) -->
+  <header id="main-header">
+    <div class="logo">
+      <img src="images/logo.png" alt="Site Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" id="home-link">HOME</a></li>
+        <li class="dropdown">
+          <a href="#" id="clubs-link">CLUBS</a>
+          <div class="dropdown-content">
+            <a href="real-madrid.html">Real Madrid</a>
+            <a href="barcelona.html">Barcelona</a>
+            <a href="manchester-united.html">Manchester United</a>
+            <a href="liverpool.html">Liverpool</a>
+            <a href="fc-bayern.html">Bayern Munich</a>
+            <a href="psg.html">Paris Saint-Germain</a>
+            <a href="chelsea.html">Chelsea</a>
+            <a href="juventus.html">Juventus</a>
+            <a href="inter-miami.html">Inter Miami</a>
+          </div>
+        </li>
+        <li><a href="#" id="sale-link">SALE</a></li>
+        <li class="dropdown">
+          <a href="#" id="old-kits-link">OLD KITS</a>
+          <div class="dropdown-content">
+            <a href="#">Season 2022-2023</a>
+            <a href="#">Season 2023-2024</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="#" id="national-teams-link">NATIONAL TEAMS</a>
+          <div class="dropdown-content">
+            <a href="argentina.html">Argentina</a>
+            <a href="portugal.html">Portugal</a>
+            <a href="brazil.html">Brazil</a>
+            <a href="france.html">France</a>
+            <a href="germany.html">Germany</a>
+            <a href="spain.html">Spain</a>
+            <a href="England.html">England</a>
+            <a href="italy.html">Italy</a>
+          </div>
+        </li>              
+      </ul>
+    </nav>
+    <div class="top-links">
+      <a href="help.html" class="top-link">Help</a>
+      <a href="orders-returns.html" class="top-link">Orders & Returns</a>
+      <a href="login.html" class="top-link">JOIN FUTSALA CLUB</a>
+    </div>
+    <div class="search-cart">
+      <div class="search-bar">
+        <input type="text" placeholder="Search here">
+        <i class="fas fa-search search-icon"></i>
+      </div>
+      <!-- Login Icon -->
+      <a href="login.html" class="login-icon"><img src="images/login.png" alt="Login"></a>
+      <!-- Cart Icon -->
+      <a href="cart.html" class="cart-icon">
+        <img src="images/cart.png" alt="Cart">
+        <span class="cart-notification">0</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="kids-page">
+    <h1>Men Soccer Jersey</h1>
+    <!-- New Filter & Sort Options -->
+    <div id="filter-sort-container">
+      <div class="sort-options">
+        <label for="sort-select">Sort by Price:</label>
+        <select id="sort-select">
+          <option value="">Select</option>
+          <option value="low-to-high">Low to High</option>
+          <option value="high-to-low">High to Low</option>
+        </select>
+      </div>
+      <div class="filter-options">
+        <span>Filter by Color:</span>
+        <label><input type="checkbox" value="Red" class="color-filter"> Red</label>
+        <label><input type="checkbox" value="Blue" class="color-filter"> Blue</label>
+        <label><input type="checkbox" value="Black" class="color-filter"> Black</label>
+        <label><input type="checkbox" value="Pink" class="color-filter"> Pink</label>
+        <label><input type="checkbox" value="White" class="color-filter"> White</label>
+        <label><input type="checkbox" value="Yellow" class="color-filter"> Yellow</label>
+      </div>
+    </div>
+
+    <div class="product-grid">
+      <!-- Argentina -->
+      <div class="kit">
+        <a href="argentina.html">
+          <img src="images/men11.jpg" alt="Argentina 24/25 Home Jersey">
+        </a>
+        <h3>Argentina 24/25 Anniversary Jersey</h3>
+        <p class="price">$120</p>
+        <p class="category">National Team</p>
+        <p class="best-seller">Best seller</p>
+        <p class="color">Blue</p>
+      </div>
+      <!-- Portugal -->
+      <div class="kit">
+        <a href="portugal.html">
+          <img src="images/men12.jpg" alt="Portugal 24/25 Home Jersey">
+        </a>
+        <h3>Portugal 24/25 Home Jersey</h3>
+        <p class="price">$120</p>
+        <p class="category">National Team</p>
+        <p class="best-seller">Best seller</p>
+        <p class="color">Red</p>
+      </div>
+      <!-- Brazil -->
+      <div class="kit">
+        <a href="brazil.html">
+          <img src="images/men1.jpg" alt="Brazil 24/25 Home Jersey">
+        </a>
+        <h3>Brazil 24/25 Home Jersey</h3>
+        <p class="price">$100</p>
+        <p class="category">National Team</p>
+        <p class="best-seller">Best seller</p>
+        <p class="color">Yellow</p>
+      </div>
+      <!-- Italy -->
+      <div class="kit">
+        <a href="italy.html">
+          <img src="images/men2.jpg" alt="Italy 24/25 Home Jersey">
+        </a>
+        <h3>Italy 24/25 Home Jersey</h3>
+        <p class="price">$100</p>
+        <p class="category">National Team</p>
+        <p class="best-seller">Best seller</p>
+        <p class="color">Blue</p>
+      </div>
+      <!-- France -->
+      <div class="kit">
+        <a href="france.html">
+          <img src="images/men3.jpg" alt="France 24/25 Home Jersey">
+        </a>
+        <h3>France 24/25 Home Jersey</h3>
+        <p class="price">$100</p>
+        <p class="category">National Team</p>
+        <p class="best-seller">Best seller</p>
+        <p class="color">Blue</p>
+      </div>
+      <!-- Germany -->
+      <div class="kit">
+        <a href="germany.html">
+          <img src="images/men4.jpg" alt="Germany 24/25 Home Jersey">
+        </a>
+        <h3>Germany 24/25 Home Jersey</h3>
+        <p class="price">$100</p>
+        <p class="category">National Team</p>
+        <p class="best-seller">Best seller</p>
+        <p class="color">White</p>
+      </div>
+      <!-- Spain -->
+      <div class="kit">
+        <a href="England.html">
+          <img src="images/men5.jpg" alt="England 24/25 Home Jersey">
+        </a>
+        <h3>England 24/25 Home Jersey</h3>
+        <p class="price">$100</p>
+        <p class="category">National Team</p>
+        <p class="best-seller">Best seller</p>
+        <p class="color">White</p>
+      </div>
+      <!-- England -->
+      <div class="kit">
+        <a href="inter-miami.html">
+          <img src="images/men6.jpg" alt="Inter Miami 24/25 Home Jersey">
+        </a>
+        <h3>Inter Miami 24/25 Home Jersey</h3>
+        <p class="price">$100</p>
+        <p class="category">National Team</p>
+        <p class="best-seller">Best seller</p>
+        <p class="color">Pink</p>
+      </div>
+      <!-- Real Madrid -->
+      <div class="kit">
+        <a href="real-madrid.html">
+          <img src="images/men7.jpg" alt="Real Madrid 24/25 Home Jersey">
+        </a>
+        <h3>Real Madrid 24/25 Home Jersey</h3>
+        <p class="price">$100</p>
+        <p class="category">Club Team</p>
+        <p class="best-seller">Best seller</p>
+        <p class="color">White</p>
+      </div>
+      <!-- Barcelona -->
+      <div class="kit">
+        <a href="barcelona.html">
+          <img src="images/men8.jpg" alt="Barcelona 24/25 Home Jersey">
+        </a>
+        <h3>Barcelona 24/25 Home Jersey</h3>
+        <p class="price">$100</p>
+        <p class="category">Club Team</p>
+        <p class="best-seller">Best seller</p>
+        <p class="color">Blue</p>
+      </div>
+      <!-- Chelsea -->
+      <div class="kit">
+        <a href="chelsea.html">
+          <img src="images/men9.jpg" alt="Chelsea 24/25 Home Jersey">
+        </a>
+        <h3>Chelsea 24/25 Home Jersey</h3>
+        <p class="price">$100</p>
+        <p class="category">Club Team</p>
+        <p class="best-seller">Best seller</p>
+        <p class="color">Blue</p>
+      </div>
+      <!-- PSG -->
+      <div class="kit">
+        <a href="psg.html">
+          <img src="images/men10.jpg" alt="PSG 24/25 Home Jersey">
+        </a>
+        <h3>PSG 24/25 Home Jersey</h3>
+        <p class="price">$100</p>
+        <p class="category">Club Team</p>
+        <p class="best-seller">Best seller</p>
+        <p class="color">Blue</p>
+      </div>
+      <!-- Man-united -->
+      <div class="kit">
+        <a href="manchester-united.html">
+          <img src="images/men13.jpg" alt="Man United 24/25 Home Jersey">
+        </a>
+        <h3>Manchester United 24/25 Home Jersey</h3>
+        <p class="price">$100</p>
+        <p class="category">Club Team</p>
+        <p class="best-seller">Best seller</p>
+        <p class="color">Red</p>
+      </div>
+    <!-- Juventus -->
+    <div class="kit">
+        <a href="juventus.html">
+          <img src="images/men14.jpg" alt="Juventus 24/25 Home Jersey">
+        </a>
+        <h3>Juventus 24/25 Home Jersey</h3>
+        <p class="price">$100</p>
+        <p class="category">Club Team</p>
+        <p class="best-seller">Best seller</p>
+        <p class="color">Black</p>
+      </div>
+    <!-- FC Bayern -->
+    <div class="kit">
+        <a href="fc-bayern.html">
+          <img src="images/men15.jpg" alt="FC Bayern 24/25 Home Jersey">
+        </a>
+        <h3>FC Bayern 24/25 Home Jersey</h3>
+        <p class="price">$100</p>
+        <p class="category">Club Team</p>
+        <p class="best-seller">Best seller</p>
+        <p class="color">Red</p>
+      </div>
+         <!-- liverpool -->
+    <div class="kit">
+        <a href="liverpool.html">
+          <img src="images/men16.jpg" alt="FC Bayern 24/25 Home Jersey">
+        </a>
+        <h3>Liverpool 24/25 Home Jersey</h3>
+        <p class="price">$100</p>
+        <p class="category">Club Team</p>
+        <p class="best-seller">Best seller</p>
+        <p class="color">Red</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer (Same as Homepage) -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Jersey Store. All rights reserved.</p>
+      <div class="social-media">
+        <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+        <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+      </div><br>
+      <div class="footer-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="about.html">About</a>
+        <a href="terms-conditions.html">Terms & Conditions</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript for Product Hover and Click Effects -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const kits = document.querySelectorAll('.kit');
+      kits.forEach(kit => {
+        kit.addEventListener('mouseenter', function () {
+          this.style.transform = 'translateY(-10px)';
+          this.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.2)';
+        });
+        kit.addEventListener('mouseleave', function () {
+          this.style.transform = 'translateY(0)';
+          this.style.boxShadow = 'none';
+        });
+      });
+    });
+  </script>
+
+  <!-- Existing JavaScript -->
+  <script>
+    // JavaScript to handle section navigation highlighting
+    document.querySelectorAll('.section-nav a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        document.querySelectorAll('.section-nav a').forEach(lnk => lnk.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+
+    // JavaScript for scroll behavior
+    let lastScroll = 0;
+    const header = document.getElementById("main-header");
+    window.addEventListener("scroll", () => {
+      const currentScroll = window.pageYOffset;
+      if (currentScroll > lastScroll && currentScroll > 100) {
+        header.classList.remove("show");
+        header.classList.add("hide");
+      } else {
+        header.classList.remove("hide");
+        header.classList.add("show");
+      }
+      lastScroll = currentScroll;
+    });
+
+    // JavaScript for dropdown functionality
+    document.addEventListener("DOMContentLoaded", function () {
+      const dropdowns = document.querySelectorAll(".dropdown");
+      dropdowns.forEach((dropdown) => {
+        dropdown.addEventListener("mouseenter", () => {
+          dropdown.querySelector(".dropdown-content").style.display = "block";
+        });
+        dropdown.addEventListener("mouseleave", () => {
+          dropdown.querySelector(".dropdown-content").style.display = "none";
+        });
+      });
+    });
+
+    // JavaScript to highlight the active navigation link
+    document.addEventListener("DOMContentLoaded", function () {
+      const currentPage = window.location.pathname.split('/').pop();
+      const navLinks = {
+        'index.html': 'home-link',
+        'real-madrid.html': 'clubs-link',
+        'barcelona.html': 'clubs-link',
+        'manchester-united.html': 'clubs-link',
+        'fc-bayern.html': 'clubs-link',
+        'argentina.html': 'national-teams-link',
+        'portugal.html': 'national-teams-link',
+      };
+      const activeLinkId = navLinks[currentPage];
+      if (activeLinkId) {
+        const activeLink = document.getElementById(activeLinkId);
+        if (activeLink) {
+          activeLink.classList.add('active');
+        }
+      }
+    });
+  </script>
+
+  <!-- New JavaScript for Filter and Sort Functionality -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const sortSelect = document.getElementById('sort-select');
+      const colorCheckboxes = document.querySelectorAll('.color-filter');
+      const kitsContainer = document.querySelector('.product-grid');
+      const kits = Array.from(document.querySelectorAll('.kit'));
+
+      // price sorting
+      sortSelect.addEventListener('change', function() {
+        let sortedKits = kits.slice();
+        if (this.value === 'low-to-high') {
+          sortedKits.sort((a, b) => {
+            let priceA = parseFloat(a.querySelector('.price').textContent.replace('$', ''));
+            let priceB = parseFloat(b.querySelector('.price').textContent.replace('$', ''));
+            return priceA - priceB;
+          });
+        } else if (this.value === 'high-to-low') {
+          sortedKits.sort((a, b) => {
+            let priceA = parseFloat(a.querySelector('.price').textContent.replace('$', ''));
+            let priceB = parseFloat(b.querySelector('.price').textContent.replace('$', ''));
+            return priceB - priceA;
+          });
+        }
+        // Append sorted kits back to the container
+        sortedKits.forEach(kit => kitsContainer.appendChild(kit));
+      });
+
+      // Filter functionality
+      colorCheckboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', filterKits);
+      });
+    //  color filtering
+      function filterKits() {
+        let selectedColors = Array.from(colorCheckboxes)
+          .filter(cb => cb.checked)
+          .map(cb => cb.value);
+
+        kits.forEach(kit => {
+          let kitColor = kit.querySelector('.color').textContent.trim();
+          // Show the kit if no filters are selected or if the kit's color matches one of the filters
+          if (selectedColors.length === 0 || selectedColors.includes(kitColor)) {
+            kit.style.display = 'block';
+          } else {
+            kit.style.display = 'none';
+          }
+        });
+      }
+    });
+  </script>
+
+  <!-- Link the external JavaScript file for cart functionality -->
+  <script src="cart.js"></script>
+</body>
+</html>

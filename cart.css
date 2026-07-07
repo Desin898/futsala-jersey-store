@@ -1,0 +1,190 @@
+/* Cart Page Styles */
+.cart-page {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Left Column: Cart Items */
+.cart-items-column {
+    flex: 2;
+}
+
+.cart-items-column h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.cart-notice {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+/* Cart Items Container */
+#cart-items {
+    margin-bottom: 20px;
+}
+
+/* Individual Cart Item Styles */
+.cart-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0;
+}
+
+.item-image img {
+    width: 150px; /* Larger image */
+    height: auto;
+    margin-right: 20px;
+}
+
+.item-details {
+    flex: 1;
+}
+
+.item-details h2 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.item-details p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.quantity-controls button {
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.quantity-controls button:hover {
+    background-color: #0056b3;
+}
+
+.item-total {
+    font-weight: bold;
+    color: #333;
+    margin-left: 10px;
+}
+
+/* Right Column: Order Summary */
+.order-summary-column {
+    flex: 1;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.order-summary-column h2 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.summary-details p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.klarna {
+    color: #000;
+    font-size: 0.9rem;
+}
+
+.klarna a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.klarna a:hover {
+    text-decoration: underline;
+}
+
+/* Promo Code Section */
+.promo-code {
+    margin-bottom: 20px;
+}
+
+.promo-code h2 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.promo-code input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.promo-code button {
+    padding: 8px 15px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.promo-code button:hover {
+    background-color: #0056b3;
+}
+
+/* Checkout Button */
+.checkout {
+    margin-bottom: 20px;
+}
+
+.checkout-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.checkout-button:hover {
+    background-color: #218838;
+}
+
+/* Payment Methods Section */
+.payment-methods {
+    margin-bottom: 20px;
+}
+
+.payment-methods h2 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.payment-icons {
+    display: flex;
+    gap: 15px;
+    font-size: 2rem;
+    color: #666;
+}
+
+.payment-icons i {
+    cursor: pointer;
+}

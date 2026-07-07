@@ -1,0 +1,317 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    padding-top: 80px; /* Add padding to prevent content from being hidden behind the fixed header */
+}
+
+/* Header with Scroll Behavior */
+#main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000000; /* Black background */
+    color: #fff;
+    padding: 10px 20px; /* Increased padding for better spacing */
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of elements */
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.7s ease-in-out;
+    z-index: 1000; /* Ensure it stays above other content */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
+}
+
+#main-header.hide {
+    transform: translateY(-100%);
+}
+
+#main-header.show {
+    transform: translateY(0);
+}
+
+header .logo img {
+    height: 60px;
+}
+
+nav {
+    flex: 1; /* Take up remaining space */
+    display: flex;
+    justify-content: center; /* Center the navigation items */
+    align-items: center; /* Vertically center the navigation items */
+    margin-top: 19px; /* Move the navigation items slightly down */
+    margin-left: -130px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center the navigation items */
+}
+
+nav ul li {
+    margin-right: 5px;
+    position: relative; /* Ensure dropdown is positioned correctly */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: small;
+    font-style: normal;
+    padding: 10px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Active Navigation Link */
+nav ul li a.active {
+    border-bottom: 2px solid #ff6600; /* Orange underline */
+    color: #ff6600; /* Orange text color */
+}
+
+/* Dropdown Menu Styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 100%; /* Position dropdown below the parent link */
+    left: 0;
+}
+
+.dropdown-content a {
+    color: #ffffff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f4f4f4;
+    color: #000;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Top Links (Help, Orders & Returns, JOIN FUTSALA CLUB) */
+.top-links {
+    display: flex;
+    align-items: center;
+    gap: 0px; /* Space between links */
+    order: 2; /* Position above search bar */
+    width: 100%; /* Full width */
+    justify-content: flex-end; /* Align to the right */
+    margin-top: -110px; /* Space below the main nav */
+    margin-right: 20px;
+}
+
+.top-link {
+    color: #fff; /* White text color */
+    text-decoration: none;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.top-link:hover {
+    background-color: #ff6600; /* Orange background on hover */
+    color: #fff; /* Ensure text remains white on hover */
+}
+
+/* Search, Login, and Cart Section */
+.search-cart {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between search, login, and cart */
+    order: 3; /* Position below top links */
+    margin-left: auto; /* Align to the right */
+    margin-right: 32px;
+    margin-top: -40px;
+}
+
+.search-cart input {
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+
+.search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 7px 4px 5px 10px; /* Adjust padding to make space for the icon */
+    border: none;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+
+.search-bar .search-icon {
+    position: absolute;
+    right: 18px;
+    color: #000; /* Icon color */
+    cursor: pointer;
+}
+
+/* Login and Cart Icon Styles */
+.login-icon,
+.cart-icon {
+    display: inline-block;
+    width: 35px; /* Adjust size as needed */
+    height: 35px; /* Adjust size as needed */
+    transition: opacity 0.4s ease; /* Smooth hover effect */
+    position: relative;
+}
+
+.login-icon img,
+.cart-icon img {
+    width: 100%; /* Ensure the image fills the container */
+    height: 100%; /* Ensure the image fills the container */
+}
+
+.login-icon:hover,
+.cart-icon:hover {
+    opacity: 0.7; /* Fade effect on hover */
+}
+
+/* Cart Notification */
+.cart-notification {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #ff6600; /* Orange background */
+    color: #fff; /* White text */
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Main Content Styles */
+.kids-page {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.kids-page h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: #333;
+}
+
+/* Product Grid Styles */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.kit {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kit:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.kit img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.kit h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.kit .price {
+    font-weight: bold;
+    color: #333;
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+.kit .category, .kit .best-seller {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.kit .best-seller {
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+.filter-sort-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.sort, .filter {
+    font-size: 16px;
+}
+
+.filter label {
+    margin-left: 10px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer .social-media img {
+    height: 20px;
+    margin: 0 10px;
+}
+
+footer .footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+footer .footer-links a:hover {
+    color: #ffcc00;
+}

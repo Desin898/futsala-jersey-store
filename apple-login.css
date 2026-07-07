@@ -1,0 +1,81 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Login Container */
+.login-container {
+    background-color: #000; /* Black background */
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-content h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.login-content p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.form-group input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #333; /* Dark input background */
+    color: #fff; /* White text */
+}
+
+.continue-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff6600; /* Orange button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.continue-button:hover {
+    background-color: #e65c00; /* Darker orange on hover */
+}
+
+/* Link Styles */
+.login-content a {
+    color: #ff6600; /* Orange links */
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.login-content a:hover {
+    text-decoration: underline;
+}

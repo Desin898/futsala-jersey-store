@@ -1,0 +1,113 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #211e1e; /* Black background */
+    color: #fff; /* White text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Login Container */
+.login-container {
+    background-color: #000000; /* Black background */
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-content h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.login-content p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.form-group input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #333; /* Dark input background */
+    color: #fff; /* White text */
+}
+
+.form-group input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.continue-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff6600; /* Orange button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.continue-button:hover {
+    background-color: #e65c00; /* Darker orange on hover */
+}
+
+/* Social Login Icons */
+.social-login {
+    margin-top: 20px;
+}
+
+.social-login p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ff6600; /* Orange on hover */
+}
+
+/* Terms and Conditions */
+.terms {
+    font-size: 0.8rem;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.terms a {
+    color: #ff6600; /* Orange links */
+    text-decoration: underline;
+}
